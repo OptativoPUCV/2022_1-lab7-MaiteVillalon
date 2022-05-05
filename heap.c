@@ -78,7 +78,7 @@ void heap_pop(Heap* pq)
 
   for (int i = 0 ; i < tamano - 1 ; i++)
   {
-    printf("%d", pq->heapArray[i].priority);    
+    printf(" %d ", pq->heapArray[i].priority);    
   }
 
   
@@ -97,6 +97,7 @@ void heap_pop(Heap* pq)
   {
     printf("%d", pq->heapArray[i].priority);    
   }
+  printf("\n");
   
 
 
