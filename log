@@ -94,3 +94,61 @@ Thu May  5 16:10:37 UTC 2022:
  tests:  7|1
 total_score: 45/70
 b5eadfc
+Thu May  5 23:13:28 UTC 2022: 
+ heap.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:75:11: error: stray ‘\303’ in program
+   int tamaño = pq->size;
+           ^
+heap.c:75:12: error: stray ‘\261’ in program
+   int tamaño = pq->size;
+            ^
+heap.c:75:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘o’
+   int tamaño = pq->size;
+             ^
+heap.c:75:13: error: ‘o’ undeclared (first use in this function)
+heap.c:75:13: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:76:36: error: stray ‘\303’ in program
+   int auxPrior = pq->heapArray[tamaño-1].priority;
+                                    ^
+heap.c:76:37: error: stray ‘\261’ in program
+   int auxPrior = pq->heapArray[tamaño-1].priority;
+                                     ^
+heap.c:76:32: error: ‘tama’ undeclared (first use in this function); did you mean ‘tanl’?
+   int auxPrior = pq->heapArray[tamaño-1].priority;
+                                ^~~~
+                                tanl
+heap.c:76:38: error: expected ‘]’ before ‘o’
+   int auxPrior = pq->heapArray[tamaño-1].priority;
+                                      ^
+heap.c:77:37: error: stray ‘\303’ in program
+   void *auxData = pq->heapArray[tamaño-1].data;
+                                     ^
+heap.c:77:38: error: stray ‘\261’ in program
+   void *auxData = pq->heapArray[tamaño-1].data;
+                                      ^
+heap.c:77:39: error: expected ‘]’ before ‘o’
+   void *auxData = pq->heapArray[tamaño-1].data;
+                                       ^
+heap.c:79:21: error: stray ‘\303’ in program
+   pq->heapArray[tamaño-1].priority = pq->heapArray[i].priority;
+                     ^
+heap.c:79:22: error: stray ‘\261’ in program
+   pq->heapArray[tamaño-1].priority = pq->heapArray[i].priority;
+                      ^
+heap.c:79:23: error: expected ‘]’ before ‘o’
+   pq->heapArray[tamaño-1].priority = pq->heapArray[i].priority;
+                       ^
+heap.c:80:21: error: stray ‘\303’ in program
+   pq->heapArray[tamaño-1].data = pq->heapArray[i].data;
+                     ^
+heap.c:80:22: error: stray ‘\261’ in program
+   pq->heapArray[tamaño-1].data = pq->heapArray[i].data;
+                      ^
+heap.c:80:23: error: expected ‘]’ before ‘o’
+   pq->heapArray[tamaño-1].data = pq->heapArray[i].data;
+                       ^
+Compilation failed
+84f6989
