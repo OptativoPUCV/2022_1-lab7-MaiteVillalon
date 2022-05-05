@@ -81,6 +81,9 @@ void heap_pop(Heap* pq)
 
   pq->heapArray[i].priority = auxPrior;
   pq->heapArray[i].data = auxData;
+
+  pq->heapArray[tamano-1].priority = 0;
+  pq->heapArray[tamano-1].data = NULL;
   pq->size = pq->size-1;
   
   
