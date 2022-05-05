@@ -40,6 +40,12 @@ Heap* createHeap()
   Heap * nuevo = (Heap*) malloc(sizeof(Heap));
   nuevo->size = 0;
   nuevo->capac = 3;
-  nuevo->heapArray = (heapElem *) malloc(sizeof(heapElem));
-  return NULL;
+  nuevo->heapArray = (heapElem *) malloc(3*sizeof(heapElem));
+
+  for (int i = 0 ; i < nuevo->capac ; i++)
+  {
+    nuevo->heapArray[i].data = NULL;
+    nuevo->heapArray[i].priority = 0;
+  }
+  return nuevo;
 }
