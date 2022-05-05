@@ -76,6 +76,12 @@ void heap_pop(Heap* pq)
   int auxPrior = pq->heapArray[tamano-1].priority;
   void *auxData = pq->heapArray[tamano-1].data;
 
+  for (int i = 0 ; i < tamano - 1 ; i++)
+  {
+    printf("%d", pq->heapArray[i].priority);    
+  }
+
+  
   pq->heapArray[tamano].priority = pq->heapArray[0].priority;
   pq->heapArray[tamano].data = pq->heapArray[0].data;
 
@@ -85,8 +91,12 @@ void heap_pop(Heap* pq)
   pq->heapArray[tamano-1].priority = 0;
   pq->heapArray[tamano-1].data = NULL;
   pq->size = pq->size-1;
-  
-  
+
+  printf("\n");
+  for (int i = 0 ; i < tamano - 1 ; i++)
+  {
+    printf("%d", pq->heapArray[i].priority);    
+  }
   
 
 
