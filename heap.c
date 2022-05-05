@@ -20,7 +20,6 @@ typedef struct Heap{
 void* heap_top(Heap* pq)
 {
   int i = 0;
-  
   if (pq->size == 0) return NULL;
     
   else
@@ -28,6 +27,8 @@ void* heap_top(Heap* pq)
     if (pq->heapArray[i].data != NULL)
       return (pq->heapArray[i].data);
   }
+
+  return NULL;
   
 }
 
