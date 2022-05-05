@@ -228,3 +228,21 @@ Thu May  5 23:35:24 UTC 2022:
  tests:  7|1
 total_score: 45/70
 a4038af
+Thu May  5 23:40:17 UTC 2022: 
+ heap.c | 14 ++++++++++----
+ 1 file changed, 10 insertions(+), 4 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:104:9: error: ‘i’ undeclared (first use in this function)
+   for ( i = 0 ; i < pq->size ; i++)
+         ^
+heap.c:104:9: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:107:9: error: unused variable ‘posSegHij’ [-Werror=unused-variable]
+     int posSegHij = i;
+         ^~~~~~~~~
+heap.c:106:9: error: unused variable ‘posPrimHij’ [-Werror=unused-variable]
+     int posPrimHij= i;
+         ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0e76730
