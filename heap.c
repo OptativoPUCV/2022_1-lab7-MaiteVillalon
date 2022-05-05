@@ -101,10 +101,38 @@ void heap_pop(Heap* pq)
 
 
 
-  for ( i = 0 ; i < pq->size ; i++)
+  for ( int  i = 0 ; i < pq->size ; i++)
   {
-    int posPrimHij= i;
-    int posSegHij = i;
+    int posPrimHij= (i*2) + 1;
+    int posSegHij = (i*2) + 2;
+    int auxPrior2 = pq->heapArray[i].priority;
+    void *auxData2 = pq->heapArray[i].data;
+
+    if (pq->heapArray[posPrimHij].priority > pq->heapArray[posSegHij].priority)
+    {
+      if (pq->heapArray[posPrimHij].priority > pq->heapArray[i].priority)
+      {
+          pq->heapArray[i].priority = pq->heapArray[posPrimHij].priority;
+          pq->heapArray[i].data = pq->heapArray[posPrimHij].data;
+
+          pq->heapArray[posPrimHij].priority = auxPrior2;
+          pq->heapArray[posPrimHij].data = auxData2;
+      }
+      else break;
+    }
+    else if (pq->heapArray[posSegHij].priority > pq->heapArray[posPrimHij].priority)
+    {
+      if (pq->heapArray[posSegHij].priority > pq->heapArray[i].priority)
+      {
+          pq->heapArray[i].priority = pq->heapArray[posSegHij].priority;
+          pq->heapArray[i].data = pq->heapArray[posSegHij].data;
+
+          pq->heapArray[posPrimHij].priority = auxPrior2;
+          pq->heapArray[posPrimHij].data = auxData2;
+      } 
+      else break;
+    }
+  
   }
 
 

@@ -246,3 +246,9 @@ heap.c:106:9: error: unused variable ‘posPrimHij’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 0e76730
+Thu May  5 23:52:19 UTC 2022: 
+ heap.c | 34 +++++++++++++++++++++++++++++++---
+ 1 file changed, 31 insertions(+), 3 deletions(-)
+ tests:  7|1
+total_score: 50/70
+f676a08
