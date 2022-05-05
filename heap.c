@@ -70,17 +70,17 @@ void heap_push(Heap* pq, void* data, int priority)
 
 
 void heap_pop(Heap* pq)
-{
-  int i = 0 ;
+{ 
+  
   int tamano = pq->size;
   int auxPrior = pq->heapArray[tamano-1].priority;
   void *auxData = pq->heapArray[tamano-1].data;
 
-  pq->heapArray[tamano].priority = pq->heapArray[i].priority;
-  pq->heapArray[tamano].data = pq->heapArray[i].data;
+  pq->heapArray[tamano].priority = pq->heapArray[0].priority;
+  pq->heapArray[tamano].data = pq->heapArray[0].data;
 
-  pq->heapArray[i].priority = auxPrior;
-  pq->heapArray[i].data = auxData;
+  pq->heapArray[0].priority = auxPrior;
+  pq->heapArray[0].data = auxData;
 
   pq->heapArray[tamano-1].priority = 0;
   pq->heapArray[tamano-1].data = NULL;
