@@ -49,8 +49,8 @@ void heap_push(Heap* pq, void* data, int priority)
   
   for ( int i = pq->size ; i >= 0 ; i--)
     {
-      int posPadre = (i-1)/2;
       int posActual = i - 1;
+      int posPadre = (posActual-1)/2;
       
       if (pq->heapArray[posPadre].priority < pq->heapArray[posActual].priority)
       {
