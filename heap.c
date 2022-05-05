@@ -48,17 +48,20 @@ void heap_push(Heap* pq, void* data, int priority)
     pq->size = pq->size +1;
   }
   
-  for ( int i = pq->size ; i > 0 ; i--)
+  for ( int i = pq->size ; i >= 0 ; i--)
     {
+      int posPadre = (i-1)/2;
+      int posActual = i - 1;
+      
       if (pq->heapArray[i - 1].priority < pq->heapArray[i].priority)
       {
-        int auxPrio = pq->heapArray[i-1].priority;
-        void * auxData = pq->heapArray[i-1].data;
-        pq->heapArray[i - 1].priority = pq->heapArray[i].priority;
-        pq->heapArray[i - 1].data = pq->heapArray[i].data;
+        int auxPrio = pq->heapArray[posPadre].priority;
+        void * auxData = pq->heapArray[posPadre].data;
+        pq->heapArray[posPadre].priority = pq->heapArray[posActual].priority;
+        pq->heapArray[posPadre].data = pq->heapArray[posActual].data;
 
-        pq->heapArray[i].priority = auxPrio;
-        pq->heapArray[i].data = auxData;
+        pq->heapArray[posActual].priority = auxPrio;
+        pq->heapArray[posActual].data = auxData;
 
       }
       else break;
