@@ -76,8 +76,8 @@ void heap_pop(Heap* pq)
   int auxPrior = pq->heapArray[tamano-1].priority;
   void *auxData = pq->heapArray[tamano-1].data;
 
-  pq->heapArray[tamano-1].priority = pq->heapArray[i].priority;
-  pq->heapArray[tamano-1].data = pq->heapArray[i].data;
+  pq->heapArray[tamano].priority = pq->heapArray[i].priority;
+  pq->heapArray[tamano].data = pq->heapArray[i].data;
 
   pq->heapArray[i].priority = auxPrior;
   pq->heapArray[i].data = auxData;
