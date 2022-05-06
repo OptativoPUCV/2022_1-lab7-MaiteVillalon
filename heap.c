@@ -112,7 +112,7 @@ void heap_pop(Heap* pq)
     {
       printf("%d " , pq->heapArray[posPrimHij].priority);
       printf("%d" , pq->heapArray[posSegHij].priority);
-      print("\n");
+      printf("\n");
       if (pq->heapArray[posPrimHij].priority > pq->heapArray[i].priority)
       {
           pq->heapArray[i].priority = pq->heapArray[posPrimHij].priority;

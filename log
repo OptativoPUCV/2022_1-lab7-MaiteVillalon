@@ -287,3 +287,9 @@ heap.c:115:7: error: implicit declaration of function ‘print’; did you mean 
 cc1: all warnings being treated as errors
 Compilation failed
 e8b444d
+Fri May  6 00:07:27 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|1
+total_score: 50/70
+3d5acb5
