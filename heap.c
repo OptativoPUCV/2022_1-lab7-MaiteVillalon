@@ -123,6 +123,8 @@ void heap_pop(Heap* pq)
           pq->heapArray[posPrimHij].priority = auxPrior2;
           pq->heapArray[posPrimHij].data = auxData2;
           i = posPrimHij; 
+          printf("cambio\n");
+          printf("%d " , pq->heapArray[posPrimHij].priority);
       }
       else break;
     }
