@@ -105,8 +105,15 @@ void heap_pop(Heap* pq)
     int auxPrior2 = pq->heapArray[i].priority;
     void *auxData2 = pq->heapArray[i].data;
 
-    if (pq->heapArray[posPrimHij].priority > pq->size)
-    if (pq->heapArray[posSegHij].priority > pq-) ;
+    if (posPrimHij > pq->size)
+    {
+      pq->heapArray[posPrimHij].priority = 0;
+    }
+    if (posSegHij > pq->size)
+    {
+      pq->heapArray[posSegHij].priority = 0;
+    }
+    
     if (pq->heapArray[posPrimHij].priority > pq->heapArray[posSegHij].priority)
     {
       printf("primero\n");
