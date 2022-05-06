@@ -275,3 +275,15 @@ Fri May  6 00:06:28 UTC 2022:
  tests:  7|1
 total_score: 50/70
 862a2cf
+Fri May  6 00:07:15 UTC 2022: 
+ heap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:115:7: error: implicit declaration of function ‘print’; did you mean ‘lrint’? [-Werror=implicit-function-declaration]
+       print("\n");
+       ^~~~~
+       lrint
+cc1: all warnings being treated as errors
+Compilation failed
+e8b444d
