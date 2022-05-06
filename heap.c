@@ -98,7 +98,7 @@ void heap_pop(Heap* pq)
 
 
   int i = 0;
-  while (  i < pq->size )
+  while (  i < pq->size -1 )
   {
     int posPrimHij= (i*2) + 1;
     int posSegHij = (i*2) + 2;
