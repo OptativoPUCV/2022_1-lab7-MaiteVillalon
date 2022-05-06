@@ -140,8 +140,8 @@ void heap_pop(Heap* pq)
           pq->heapArray[i].priority = pq->heapArray[posSegHij].priority;
           pq->heapArray[i].data = pq->heapArray[posSegHij].data;
 
-          pq->heapArray[posPrimHij].priority = auxPrior2;
-          pq->heapArray[posPrimHij].data = auxData2;
+          pq->heapArray[posSegHij].priority = auxPrior2;
+          pq->heapArray[posSegHij].data = auxData2;
           i = posSegHij; 
           printf("cambio\n");
           printf("%d \n" , pq->heapArray[posSegHij].priority);
