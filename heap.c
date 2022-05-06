@@ -100,8 +100,7 @@ void heap_pop(Heap* pq)
   printf("\n");*/
 
 
-  int i;
-  int posActual = 0;
+  int i = 0;
   while (  i < pq->size )
   {
     int posPrimHij= (i*2) + 1;

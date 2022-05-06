@@ -263,3 +263,9 @@ heap.c:104:7: error: unused variable ‘posActual’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 26bd09a
+Fri May  6 00:03:49 UTC 2022: 
+ heap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  7|1
+total_score: 50/70
+688307f
