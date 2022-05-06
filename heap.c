@@ -76,26 +76,12 @@ void heap_pop(Heap* pq)
   int auxPrior = pq->heapArray[tamano-1].priority;
   void *auxData = pq->heapArray[tamano-1].data;
 
-  /*for (int i = 0 ; i < tamano ; i++)
-  {
-    printf(" %d", pq->heapArray[i].priority);    
-  }
-  */
-  
   pq->heapArray[tamano].priority = pq->heapArray[0].priority;
   pq->heapArray[tamano].data = pq->heapArray[0].data;
 
   pq->heapArray[0].priority = auxPrior;
   pq->heapArray[0].data = auxData;
   pq->size = pq->size-1;
-
-  printf("\n");
-  for (int i = 0 ; i < pq->size ; i++)
-  {
-    printf(" %d", pq->heapArray[i].priority);    
-  }
-  printf("\n");
-
 
   int i = 0;
   while (  i < pq->size )
@@ -117,11 +103,6 @@ void heap_pop(Heap* pq)
     
     if (pq->heapArray[posPrimHij].priority > pq->heapArray[posSegHij].priority)
     {
-      printf("primero\n");
-      printf("%d " , pq->heapArray[i].priority);
-      printf("%d " , pq->heapArray[posPrimHij].priority);
-      printf("%d" , pq->heapArray[posSegHij].priority);
-      printf("\n");
       if (pq->heapArray[posPrimHij].priority > pq->heapArray[i].priority)
       {
           pq->heapArray[i].priority = pq->heapArray[posPrimHij].priority;
@@ -130,18 +111,11 @@ void heap_pop(Heap* pq)
           pq->heapArray[posPrimHij].priority = auxPrior2;
           pq->heapArray[posPrimHij].data = auxData2;
           i = posPrimHij; 
-          printf("cambio\n");
-          printf("%d " , pq->heapArray[0].priority);
       }
       else break;
     }
     else if (pq->heapArray[posSegHij].priority > pq->heapArray[posPrimHij].priority)
     {
-      printf("segundo\n");
-      printf("%d " , pq->heapArray[i].priority);
-      printf("%d " , pq->heapArray[posPrimHij].priority);
-      printf("%d" , pq->heapArray[posSegHij].priority);
-      printf("\n");
       if (pq->heapArray[posSegHij].priority > pq->heapArray[i].priority)
       {
           pq->heapArray[i].priority = pq->heapArray[posSegHij].priority;
@@ -150,8 +124,6 @@ void heap_pop(Heap* pq)
           pq->heapArray[posSegHij].priority = auxPrior2;
           pq->heapArray[posSegHij].data = auxData2;
           i = posSegHij; 
-          printf("cambio\n");
-          printf("%d \n" , pq->heapArray[0].priority);
       } 
       else break;
     }
