@@ -115,7 +115,7 @@ void heap_pop(Heap* pq)
       printf("%d " , pq->heapArray[posPrimHij].priority);
       printf("%d" , pq->heapArray[posSegHij].priority);
       printf("\n");
-      if (pq->heapArray[posPrimHij].priority > pq->heapArray[i].priority)
+      if (pq->heapArray[posPrimHij].priority >= pq->heapArray[i].priority)
       {
           pq->heapArray[i].priority = pq->heapArray[posPrimHij].priority;
           pq->heapArray[i].data = pq->heapArray[posPrimHij].data;
@@ -128,7 +128,7 @@ void heap_pop(Heap* pq)
       }
       else break;
     }
-    else if (pq->heapArray[posSegHij].priority > pq->heapArray[posPrimHij].priority)
+    else if (pq->heapArray[posSegHij].priority >= pq->heapArray[posPrimHij].priority)
     {
       printf("segundo\n");
       printf("%d " , pq->heapArray[i].priority);
