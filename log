@@ -383,3 +383,13 @@ Fri May  6 00:37:06 UTC 2022:
  tests:  7|1
 total_score: 50/70
 e7c300a
+Fri May  6 00:42:40 UTC 2022: 
+ heap.c | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:109:48: error: expected expression before ‘)’ token
+     if (pq->heapArray[posSegHij].priority > pq-) ;
+                                                ^
+Compilation failed
+b077c3b
