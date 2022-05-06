@@ -88,8 +88,8 @@ void heap_pop(Heap* pq)
   pq->heapArray[0].priority = auxPrior;
   pq->heapArray[0].data = auxData;
 
-  pq->heapArray[tamano-1].priority = 0;
-  pq->heapArray[tamano-1].data = NULL;
+  //pq->heapArray[tamano-1].priority = 0;
+  //pq->heapArray[tamano-1].data = NULL;
   pq->size = pq->size-1;
 
   /*printf("\n");
