@@ -105,7 +105,7 @@ void heap_pop(Heap* pq)
     int auxPrior2 = pq->heapArray[i].priority;
     void *auxData2 = pq->heapArray[i].data;
 
-    /*if (posPrimHij > pq->size)
+    if (posPrimHij > pq->size)
     {
       pq->heapArray[posPrimHij].priority = 0;
     }
@@ -113,7 +113,7 @@ void heap_pop(Heap* pq)
     {
       pq->heapArray[posSegHij].priority = 0;
     }
-    */
+    
     
     if (pq->heapArray[posPrimHij].priority > pq->heapArray[posSegHij].priority)
     {
