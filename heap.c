@@ -87,9 +87,6 @@ void heap_pop(Heap* pq)
 
   pq->heapArray[0].priority = auxPrior;
   pq->heapArray[0].data = auxData;
-
-  //pq->heapArray[tamano-1].priority = 0;
-  //pq->heapArray[tamano-1].data = NULL;
   pq->size = pq->size-1;
 
   /*printf("\n");
@@ -108,7 +105,7 @@ void heap_pop(Heap* pq)
     int auxPrior2 = pq->heapArray[i].priority;
     void *auxData2 = pq->heapArray[i].data;
 
-    //if (pq->heapArray[posPrimHij].priority == 0 && pq->heapArray[posSegHij].priority == 0) break;
+    if (pq->heapArray[posPrimHij].priority == 0 && pq->heapArray[posSegHij].priority == 0) break;
     
     if (pq->heapArray[posPrimHij].priority > pq->heapArray[posSegHij].priority)
     {
@@ -126,7 +123,7 @@ void heap_pop(Heap* pq)
           pq->heapArray[posPrimHij].data = auxData2;
           i = posPrimHij; 
           printf("cambio\n");
-          printf("%d " , pq->heapArray[posPrimHij].priority);
+          printf("%d " , pq->heapArray[0].priority);
       }
       else break;
     }
@@ -146,7 +143,7 @@ void heap_pop(Heap* pq)
           pq->heapArray[posSegHij].data = auxData2;
           i = posSegHij; 
           printf("cambio\n");
-          printf("%d \n" , pq->heapArray[posSegHij].priority);
+          printf("%d \n" , pq->heapArray[0].priority);
       } 
       else break;
     }
