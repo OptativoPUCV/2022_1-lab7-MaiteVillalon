@@ -108,6 +108,8 @@ void heap_pop(Heap* pq)
     int auxPrior2 = pq->heapArray[i].priority;
     void *auxData2 = pq->heapArray[i].data;
 
+    if (pq->heapArray[posPrimHij].priority == 0 && pq->heapArray[posSegHij].priority == 0) break;
+    
     if (pq->heapArray[posPrimHij].priority >= pq->heapArray[posSegHij].priority)
     {
       printf("primero\n");
